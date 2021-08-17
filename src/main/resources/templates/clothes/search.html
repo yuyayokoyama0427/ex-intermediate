@@ -16,6 +16,8 @@
 <select name="color">
 <option th:each="color:${colorMap}" th:text="${color.value}" th:value="${color.key}" th:field="*{color}">
 </select>
+<br>
+<button>検索</button>
 </form>
 
 <div th:if="${clotheList}">
