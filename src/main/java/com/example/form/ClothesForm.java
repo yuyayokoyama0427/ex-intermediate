@@ -13,8 +13,8 @@ public class ClothesForm {
 	private String color;
 	
 	
-	public String getGender() {
-		return gender;
+	public Integer getIntGender() {
+		return Integer.parseInt(this.gender);
 	}
 	public void setGender(String gender) {
 		this.gender = gender;
