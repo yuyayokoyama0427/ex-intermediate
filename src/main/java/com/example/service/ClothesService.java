@@ -23,7 +23,12 @@ public class ClothesService {
 	@Autowired
 	private ClothesRepository clotheRepository;
 	
-	
+	/**
+	 * 色と性別の条件に合う衣類情報を取得
+	 * @param color 色
+	 * @param gender 性別
+	 * @return 衣類情報
+	 */
 	public List<Clothes> searchByColorAndGender(String color, Integer gender){
 		return clotheRepository.findByColorAndGender(color, gender);
 	}

@@ -44,7 +44,8 @@ public class ClothesRepository {
 	 * @return 衣類情報一覧
 	 */
 	public List<Clothes> findByColorAndGender(String color, Integer gender){
-		String sql = "SELECT id, category, genre, gender, color, price, size FROM clothes WHERE color=:color AND gender=:gender;";
+		StringBuilder sql = new StringBuilder();
+		sql.append("SELECT id, category, genre, gender, color, price, size FROM clothes WHERE color=:color AND gender=:gender;");
 		
 		SqlParameterSource param = new MapSqlParameterSource().addValue("color", color).addValue("gender", gender);
 		

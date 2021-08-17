@@ -14,28 +14,27 @@
 </div>
 
 <select name="color">
-<option th:each="color:${colorMap}" th:text="${color.value}" th:value="${color.key}" th:field="*{color}">
+<option th:each="color:${colorMap}" th:text="${color.value}" th:value="${color.value}" th:field="*{color}"></option>
 </select>
 <br>
 <button>検索</button>
 </form>
 
 <div th:if="${clotheList}">
-<table border="1" th:each="clotheList:${clotheList}">
+<table border="1" th:each="clothe:${clotheList}">
 <tr>
 	<td>ジャンル</td>
-	<td th:text="${clothes.genre}"></td>
+	<td th:text="${clothe.genre}"></td>
 </tr>
 <tr>
 	<td>サイズ</td>
-	<td th:text="${clothes.size}"></td>
+	<td th:text="${clothe.size}"></td>
 </tr>
 <tr>
 	<td>価格</td>
-	<td th:text="${clothes.price}"></td>
+	<td th:text="${clothe.price}"></td>
 </tr>
 </table>
-
 </div>
 
 </body>
